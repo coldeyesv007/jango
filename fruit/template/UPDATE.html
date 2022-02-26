@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UP</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+<form method="post"> {% csrf_token%}
+<h3 class="text">Student Details</h3>
+<table class="table">
+    <thead>
+      <tr>
+        <th>RollNO</th>
+        <th>Name</th>
+
+        <th>Age</th>
+          <th>Mark</th>
+ <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in f %}
+
+      <tr>
+        <td>{{i.rollno}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+          <td>{{i.mark}}</td>
+          <td><img src="{{i.image.url}}" width="20%"></td>
+             </tr>
+            {% endfor %}
+     </tbody>
+  </table>
+
+</form>
+</body>
+</html>

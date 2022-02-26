@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>search</title>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body>
+<form action="search1" method="post" enctype="multipart/form-data">{% csrf_token %}
+     <label>Search</label>
+    <input type="number" name="n6" placeholder="Search"/><br>
+    <input type="submit" class="btn btn-info"  value="search ">
+</form>
+</body>
+</html>

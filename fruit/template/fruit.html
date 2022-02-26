@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fruit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+<body style="background-image:url('{% static 'student.jpg' %}" >
+
+
+
+<div class="container">
+  <div class="brand-logo"></div>
+  <div class="brand-title">mark</div>
+    <form action="go" method="post" enctype="multipart/form-data">{% csrf_token %}
+  <div class="inputs">
+    <label>RollNo</label>
+    <input type="number" name="n1" placeholder="RollNo"/>
+    <label>Name</label>
+    <input type="text" name="n2" placeholder="Name"/>
+      <label>Age</label>
+    <input type="number" name="n3" placeholder="Age"/><br>
+
+      <label>Mark</label>
+    <input type="number" name="n4" placeholder="Mark"/>
+      <label>Choosefile</label>
+    <input type="file" name="n5" placeholder="File"/>
+
+  </div>
+
+
+
+    <div class="button">
+         <input type="submit" class="btn btn-info" value="Add ">
+        <input type="submit" class="btn btn-info" FORMACTION="Display" VALUE="Display">
+        <input type="submit" class="btn btn-info" FORMACTION="search" VALUE="Search">
+    </div>
+        </form>
+</div>
+</body>
+</html>
